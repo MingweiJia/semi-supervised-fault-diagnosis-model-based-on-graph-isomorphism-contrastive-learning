@@ -14,7 +14,6 @@ class TEDataset(Dataset):
         self.data = self.load_data()
 
     def load_data(self):
-        # Load data from CSV files or other formats
         data = []
         for file_name in os.listdir(self.data_dir):
             if file_name.endswith('.csv') and self.split in file_name:
