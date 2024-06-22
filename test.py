@@ -27,8 +27,8 @@ class TEDataset(Dataset):
 
     def __getitem__(self, idx):
         sample = self.data[idx]
-        x = sample[:-1]  # All columns except the last one as features
-        y = sample[-1]  # The last column as label
+        x = sample[:-1]
+        y = sample[-1]
         return torch.tensor(x, dtype=torch.float32), torch.tensor(y, dtype=torch.long)
 
 
